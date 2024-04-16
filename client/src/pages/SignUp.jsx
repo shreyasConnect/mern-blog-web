@@ -29,7 +29,7 @@ export default function SignUp() {
         return setErrorMessage(data.message);
       }
       setLoading(false);
-      if(res.ok) {
+      if (res.ok) {
         navigate('/sign-in');
       }
     } catch (error) {
@@ -44,7 +44,7 @@ export default function SignUp() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-              Sahand's
+              TechSavvy
             </span>
             Blog
           </Link>
@@ -98,11 +98,12 @@ export default function SignUp() {
                 'Sign Up'
               )}
             </Button>
+            <p className='text-center' >OR</p>
             <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Have an account?</span>
-            <Link to='/sign-in' className='text-blue-500'>
+            <Link to='/sign-in' className='text-blue-500 hover:underline'>
               Sign In
             </Link>
           </div>

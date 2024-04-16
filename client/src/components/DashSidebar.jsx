@@ -13,9 +13,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export default function DashSidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
   const [tab, setTab] = useState('');
@@ -36,6 +38,8 @@ export default function DashSidebar() {
         console.log(data.message);
       } else {
         dispatch(signoutSuccess());
+        navigate('/');
+        navi
       }
     } catch (error) {
       console.log(error.message);
@@ -60,7 +64,7 @@ export default function DashSidebar() {
             <Sidebar.Item
               active={tab === 'profile'}
               icon={HiUser}
-              label={currentUser.isAdmin ? 'Admin' : 'User'}
+              // label={currentUser.isAdmin ? 'Admin' : 'User'}
               labelColor='dark'
               as='div'
             >
@@ -80,7 +84,7 @@ export default function DashSidebar() {
           )}
           {currentUser.isAdmin && (
             <>
-              <Link to='/dashboard?tab=users'>
+              {/* <Link to='/dashboard?tab=users'>
                 <Sidebar.Item
                   active={tab === 'users'}
                   icon={HiOutlineUserGroup}
@@ -88,7 +92,7 @@ export default function DashSidebar() {
                 >
                   Users
                 </Sidebar.Item>
-              </Link>
+              </Link> */}
               <Link to='/dashboard?tab=comments'>
                 <Sidebar.Item
                   active={tab === 'comments'}

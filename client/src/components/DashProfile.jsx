@@ -159,6 +159,7 @@ export default function DashProfile() {
         console.log(data.message);
       } else {
         dispatch(signoutSuccess());
+        
       }
     } catch (error) {
       console.log(error.message);

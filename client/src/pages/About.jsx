@@ -9,14 +9,14 @@ export default function About() {
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              <strong style={{ color: 'black' }}>Welcome to TechSavvyBlog</strong>
+              <strong style={{ color: 'white' }}>Welcome to TechSavvyBlog</strong>
               <br></br>
               At TechSavvyBlog, we're passionate about exploring the ever-evolving world of technology and sharing our insights with you. Whether you're a tech enthusiast, a budding entrepreneur, or simply curious about the latest innovations, you've come to the right place.
 
             </p>
 
             <p>
-              <strong style={{ color: 'black' }}>Our Team</strong>
+              <strong style={{ color: 'white' }}>Our Team</strong>
               <br></br>
               Behind TechSavvyBlog is a dedicated team of tech enthusiasts, writers, and industry experts who are passionate about sharing their knowledge and expertise with you. With diverse backgrounds and experiences, our team brings a unique perspective to the table, ensuring that you receive well-rounded and comprehensive coverage of all things tech.
 
